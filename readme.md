@@ -1,6 +1,8 @@
 # Just Javascript
 It's nice to just get back to basics and understand how JS works in the vacuum from whence it came. Plus some of the niceties that have been plugged into browsers over the years of course. But no frameworks, no npm, bower, grunt. Just the browser and some text.
 
+If you're just starting out on this repo, after you pull it down run `python -m SimpleHTTPServer` to start a local server now go to [localhost:8000/index.html](http://localhost:8000/index.html) :bridge_at_night:
+
 ## LINER NOTES: (disregard or hopefully these help in some way)
 
 #   What is Javascript?
@@ -44,6 +46,7 @@ Function scope is interesting. Let's play with it a skosche. Skoshe. Skosh. Scos
 
 ```javascript
 var oldVar = 3;
+var newVar = "don't bring me here anymore, ahrite?";
 
 function reduceReuseReinvigorate() {
     var newVar = ++oldVar;
@@ -52,9 +55,10 @@ function reduceReuseReinvigorate() {
 
 console.log(reduceReuseReinvigorate()); // -> ?
 console.log(reduceReuseReinvigorate()); // -> ?
+console.log(newVar); // -> ?
 ```
 
-terrible example. But as 3rd Eye would say, "how's it gonna be?"
+terrible example. Reflowed it once... let's run with it. As 3rd Eye would say, "how's it gonna be?"
 
 ```ruby
 if [CORRECT ANSWER GIVEN]: Excellent!
