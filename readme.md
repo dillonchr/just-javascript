@@ -28,6 +28,15 @@ All of these tags also have specific `Events` that JS has access to.
 * `load`
 * `error`
 
+Not really part of the DOM (right?) but JS has a few UI elements we can use (sparingly).
+
+* console
+* alert
+* confirm
+* prompt
+* browser notifications
+* navigation (well not UI but we could have a non-ui section I guess of just nav... heh)
+
 ### Asynchronicity
 JS uses an event loop. No multithreading exists (`webworkers` are interesting but not necessary to dig into now). So we need to be careful about how we handle _render blocking_ code. The great thing about this is JS treats everything as a `function`. Well don't quote me on that bit there. What I'm trying to convey is that `functions` are like candy in JS. We pass them back and forth. We can encapsulate a bunch of work into a function and pass it forever and then something can run that function with some limited context.
 
@@ -47,7 +56,27 @@ console.log(reduceReuseReinvigorate()); // -> ?
 
 terrible example. But as 3rd Eye would say, "how's it gonna be?"
 
-[CORRECT ANSWER GIVEN]: Excellent!
-[INCORRECT ANSWER GIVEN]: Excellent! Your brain isn't as broken as JS function scope!
+```ruby
+if [CORRECT ANSWER GIVEN]: Excellent!
+elsif [INCORRECT ANSWER GIVEN]: Excellent! Your brain isn't as broken as JS function scope!
+```
 
+Most common use case for this type of maneuver is fetching data and then updating the display with it.
+
+Let's learn good ol' fashioned [`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started#Step_3_–_A_Simple_Example) before witnessing the beauty of [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+
+## ECMA and their so-called script standards
+ES5 was a massive boom to Javascript. It totally stole the thunder from `jquery`. Actually if I remember correctly `jquery` is kind of part of the reason some of the features made it into ES5. I could be fabricating that entirely, but array methods and query selectors were game-changers (for browsers that implemented them early).
+
+ES6+ was the next step. Oh right ES is the standard defined for JS which web browser makers are to follow in their JS engines. Yes everybody still has minor differences but thankfully the gap is much smaller today than 5 years ago.
+
+Demo a few ES5 things
+* array manips
+* query selector
+* localStorage
+
+Then rewrite them with ES6
+* lambda or arrow functions
+* destructuring
+* async awaits
 
