@@ -9,6 +9,15 @@
         font-family: sans-serif;
         font-size: 32px;
     }
+    form {
+        background: magenta;
+    }
+    .papaya > input {
+        background: brown;
+    }
+    #email {
+        background: blue;
+    }
 </style>
     </head>
     <body>
@@ -27,12 +36,16 @@
         </div>
         <video style="height:300px;width:400px;" id="vid"></video>
         <hr />
-        <form>
-            <input type="email" id="email" />
-            <input type="password" id="password" />
+        <form class="papaya">
+            <input type="text" id="email" />
+            <input type="password" />
             <input id="ego" />
             <button>Heart is a lonely hunter</button>
         </form>
+
+    
+        <script src="app.js"></script>
+
         <p>Add some images in here.</p>
         <p>Fetch some video or something to test the video.</p>
         <p>Oh yeah and use an external script.</p>
