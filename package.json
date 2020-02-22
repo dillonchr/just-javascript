@@ -1,0 +1,25 @@
+{
+  "name": "just",
+  "version": "1.0.0",
+  "description": "It's nice to just get back to basics and understand how JS works in the vacuum from whence it came. Plus some of the niceties that have been plugged into browsers over the years of course. But no frameworks, no npm, bower, grunt. Just the browser and some text.",
+  "main": "app.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dillonchr/just-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dillonchr/just-javascript/issues"
+  },
+  "homepage": "https://github.com/dillonchr/just-javascript#readme"
+}
