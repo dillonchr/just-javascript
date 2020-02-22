@@ -12,18 +12,11 @@ var form = document.querySelector('form');
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    const email = document.querySelector('#email').value;
-    const password = document.querySelector('input[type="password"]').value;
+    const productId = document.getElementById('productID').value;
 
-    Api.get(`http://localhost:3009/login?email=${email}&password=${password}`)
-        .then((json) => {
-            for (let i = 0; i < Object.keys(json).length; i++) {
-                console.log('key', Object.keys(json)[i]);
-            }
-            for (let key of Object.entries(json)) {
-                console.log('asdfasdfasdfasdf', key);
-            }
-            alert(`Hello ${json.email}`);
+    Api.get(`http://localhost:3009/product/${productId}`)
+        .then((product) => {
+            alert(`${product.name} costs ${product.cost} but we make ${product.price}`);
         })
         .catch((err) => {
             alert('u failed');
